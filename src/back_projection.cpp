@@ -151,6 +151,8 @@ void backProjection()
 		srcArray[i] = tempArray[i] - arrayProjection[i];
 		dstArray[i] = tempArray2[i] - arrayProjection[i];
 	}
+	// mendapatkan dua titik point, point srcArray dan dstArray,
+	// kemudian dicari jarak antara 2 titik tersebut. 
 
 	//printf("[3D] X1 | Y1 = %f | %f\n", srcArray[0], srcArray[1]);
 	//printf("[3D] X2 | Y2 = %f | %f\n", dstArray[0], dstArray[1]);
