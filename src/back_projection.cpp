@@ -1,6 +1,5 @@
 /*
 	// Estimate distance between object using Back-Projection
-	// Khoirul Anwar
 	// PENS
 	// Steps: 	1. 	Calibration of camera using matlab to Get intrinsic Parameter of camera
 	//			2. 	Get center of each object in pixel 
@@ -63,6 +62,7 @@ float arrayALPHA[3][3] = {
 };
 
 
+// fungsi getXYPixel untuk mendapatkan sample titik 2D dari titik 0,0 dari 3D point
 void getXYPixel()
 {
 	// TODO
@@ -119,6 +119,8 @@ void getXYPixel_Reverse()
 }
 
 
+// fungsi backProjection ini adalah fungsi untuk  mendapatkan nilai 3D pixel
+// menggunakan matriks hasil kalibrasi kamera, dan matriks translasi serta matriks rotasi dari kamera
 void backProjection()
 {
 	// arrayALPHA * pointSrc - arrayProjection
@@ -234,6 +236,9 @@ int main(int argc, char** argv)
 	return 0;
 }
 
+// Fungsi thresh_callback untuk menghitung banyak obyek / contours.
+// kemudian untuk mendapatkan titik tengah objek, digunakan fungsi moments
+// titik tengah kemudian 
 /** @function thresh_callback */ 
 void thresh_callback(int, void* )
 {
